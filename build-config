@@ -1,0 +1,32 @@
+TOOLCHAINDIR= Where your toolchains are 
+
+TOOLCHAIN= Which toolchain in this format "arm-eabi-4.6/bin/arm-eabi-"
+
+CROSS_COMPILE=$TOOLCHAINDIR$TOOLCHAIN
+
+HOST_CC="gcc"
+
+LOCAL_BUILD_DIR=~/toro
+
+TARGET_DIR= Put where you want ZIP files to be stored here
+
+SYSTEM_PARTITION="Put system partition of device here leaving apostrophes"
+
+DEFCONFIG= Put config filename here of device
+
+FLASH_BOOT='Put boot partition of device here leaving apostrophes'
+
+PHONE=' Put name of device here leaving apostrophes'
+
+# ----
+
+N_CORES= Number of brunching cores aka -j# Flag
+VERSION= Put Name & Version Here
+
+# ----
+
+BANNER=`cat <<EOF
+ui_print("$VERSION");
+ui_print("for");
+ui_print("$PHONE");
+EOF`
