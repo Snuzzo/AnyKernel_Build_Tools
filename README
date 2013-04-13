@@ -20,7 +20,7 @@ PHONE=' Put name of device here leaving apostrophes'
 
 Place the kernel directory in LOCAL_BUILD_DIR
 
-Place rest of files in in the root of your source and run build.sh. You will find the output zip in TARGET_DIR 
+Place rest of files in in the root of your source and run build.sh in terminal. You will find the output zip in TARGET_DIR 
 
 These work for unlocked & HTC s-off bootloader devices
 
