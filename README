@@ -1,0 +1,27 @@
+See build-config
+
+TOOLCHAINDIR= Where your toolchains are 
+
+TOOLCHAIN= Which toolchain in this format "arm-eabi-4.6" without quotes
+
+CROSS_COMPILE=$TOOLCHAINDIR/$TOOLCHAIN/bin/arm-eabi-
+
+LOCAL_BUILD_DIR= Put where your build files are usually in root of source in name of device eg, vigor toro dna
+
+TARGET_DIR= Put where you want ZIP files to be stored here
+
+SYSTEM_PARTITION="Put system partition of device here leaving apostrophes"
+
+DEFCONFIG= Put config filename here of device eg, vigor_aosp_defconfig
+
+FLASH_BOOT='Put boot partition of device here leaving apostrophes'
+
+PHONE=' Put name of device here leaving apostrophes'
+
+Place the following folders in your LOCAL_BUILD_DIR
+global
+kernel
+postboot
+videofix
+
+Place rest of files in in the root of your source and run build.sh. You will find the output zip TARGET_DIR 

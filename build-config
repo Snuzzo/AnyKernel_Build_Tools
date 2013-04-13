@@ -1,25 +1,16 @@
-TOOLCHAINDIR= Where your toolchains are 
-
-TOOLCHAIN= Which toolchain in this format "arm-eabi-4.6/bin/arm-eabi-"
-
-CROSS_COMPILE=$TOOLCHAINDIR$TOOLCHAIN
-
-LOCAL_BUILD_DIR= Put where your build files are usually in root of source in name of device eg, vigor toro dna
-
-TARGET_DIR= Put where you want ZIP files to be stored here
-
-SYSTEM_PARTITION="Put system partition of device here leaving apostrophes"
-
-DEFCONFIG= Put config filename here of device
-
-FLASH_BOOT='Put boot partition of device here leaving apostrophes'
-
-PHONE=' Put name of device here leaving apostrophes'
-
+TOOLCHAINDIR= 
+TOOLCHAIN= 
+CROSS_COMPILE=$TOOLCHAINDIR/$TOOLCHAIN/bin/arm-eabi-
+LOCAL_BUILD_DIR= 
+TARGET_DIR= 
+SYSTEM_PARTITION=
+DEFCONFIG=
+FLASH_BOOT=
+PHONE=
 # ----
 
-N_CORES= Number of brunching cores aka -j# Flag
-VERSION= Put Name & Version Here
+N_CORES=
+VERSION=
 
 # ----
 
