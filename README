@@ -20,3 +20,7 @@ PHONE=' Put name of device here leaving apostrophes'
 
 
 Place rest of files in in the root of your source and run build.sh. You will find the output zip TARGET_DIR 
+
+These work for unlocked & HTC s-off bootloader devices
+
+See Anykernel Rezound for possible S-On implementation
