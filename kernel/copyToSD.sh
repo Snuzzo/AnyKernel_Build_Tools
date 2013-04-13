@@ -3,5 +3,5 @@
 # 
 # Kludgy hack to help with kernels
 #
-cp /tmp/PH98IMG.zip /sdcard/PH98IMG.zip 
+cp /tmp/boot.img /sdcard/AnyKernel-Boots/boot.img 
 exit 0

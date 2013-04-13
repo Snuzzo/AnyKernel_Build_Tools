@@ -22,6 +22,13 @@ sha1_check(read_file("/tmp/boot/zImage")) == "@@SUM@@"
 then
 ui_print("Flash successful");
 ui_print("Unmounting Filesystems");
+else
+ui_print("S-on or stock boot.img detected...");
+set_perm(0, 0, 0777, "/tmp/buildZip.sh");
+run_program("/tmp/copyToSD.sh");
+unmount("/sdcard");
+ui_print("Added boot.img to /sdcard/AnyKernel-Boots directory...");
+ui_print("Original scripting & credits to con247 @xda.");
 endif;
 unmount("/system");
 ui_print("Done");

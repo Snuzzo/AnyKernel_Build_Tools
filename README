@@ -10,18 +10,8 @@ LOCAL_BUILD_DIR= Put where your build files are usually in root of source in nam
 
 TARGET_DIR= Put where you want ZIP files to be stored here
 
-SYSTEM_PARTITION="Put system partition of device here leaving apostrophes"
-
-DEFCONFIG= Put config filename here of device eg, vigor_aosp_defconfig
-
-FLASH_BOOT='Put boot partition of device here leaving apostrophes'
-
-PHONE=' Put name of device here leaving apostrophes'
-
 Place the kernel directory in LOCAL_BUILD_DIR
 
 Place rest of files in in the root of your source and run build.sh in terminal. You will find the output zip in TARGET_DIR 
 
-These work for unlocked & HTC s-off bootloader devices
-
-See Anykernel Rezound for possible S-On implementation
+This tree is complete for auto s-on detection for DNA. Must flash boot.img from AnyKernel-Boots located on internal storage to complete installation if S-On.
