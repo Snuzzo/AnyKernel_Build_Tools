@@ -22,22 +22,6 @@ sha1_check(read_file("/tmp/boot/zImage")) == "@@SUM@@"
 then
 ui_print("Flash successful");
 ui_print("Unmounting Filesystems");
-else
-ui_print("S-on or stock boot.img detected...");
-ui_print("Adding zip to /sdcard...");
-set_perm(0, 0, 0777, "/tmp/buildZip.sh");
-set_perm(0, 0, 0777, "/tmp/copyToSD.sh");
-set_perm(0, 0, 0777, "/tmp/rebootToBootloader.sh");
-set_perm(0, 0, 0777, "/tmp/misctool");
-run_program("/tmp/misctool", "w", "1.00.000.0");
-run_program("/tmp/buildZip.sh");
-run_program("/tmp/copyToSD.sh");
-unmount("/sdcard");
-ui_print("Done! PH98IMG.zip on /sdcard (external)");
-ui_print("Script by con247 @xda.");
-ui_print("Copying system files...");
-ui_print("Rebooting to Bootloader (HBOOT)");
-run_program("/tmp/rebootToBootloader.sh");
 endif;
 unmount("/system");
 ui_print("Done");
