@@ -4,9 +4,7 @@ TOOLCHAIN= Which toolchain in this format "arm-eabi-4.6/bin/arm-eabi-"
 
 CROSS_COMPILE=$TOOLCHAINDIR$TOOLCHAIN
 
-HOST_CC="gcc"
-
-LOCAL_BUILD_DIR=~/toro
+LOCAL_BUILD_DIR= Put where your build files are usually in root of source in name of device eg, vigor toro dna
 
 TARGET_DIR= Put where you want ZIP files to be stored here
 

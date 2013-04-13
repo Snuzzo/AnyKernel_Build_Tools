@@ -1,9 +1,7 @@
 #!/bin/bash -e
 
-. snuzzo-build-config
+. build-config
 
 make    \
         ARCH=arm \
-        CROSS_COMPILE="$CROSS_COMPILE" \
-        HOST_CC="$HOST_CC" \
-	$*
+        CROSS_COMPILE="$CROSS_COMPILE"

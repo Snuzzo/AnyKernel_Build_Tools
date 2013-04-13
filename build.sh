@@ -91,8 +91,9 @@ EOF
 
 
 cp $ZIMAGE $ANYKERNEL
-mkdir $LOCAL_BUILD_DIR/update/kernel
+mkdir -p $LOCAL_BUILD_DIR/update/kernel
 cp $ANYKERNEL/* $LOCAL_BUILD_DIR/update/kernel
+
 
 (
     cd $UPDATE_ROOT
