@@ -89,7 +89,6 @@ EOF
       < $TOOLS_DIR/updater-script
 ) > $UPDATE_ROOT/META-INF/com/google/android/updater-script
 
-
 cp $ZIMAGE $ANYKERNEL
 mkdir $LOCAL_BUILD_DIR/update/kernel
 cp $ANYKERNEL/* $LOCAL_BUILD_DIR/update/kernel

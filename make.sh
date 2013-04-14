@@ -1,6 +1,6 @@
 #!/bin/bash -e
 
-. snuzzo-build-config
+. build-config
 
 make    \
         ARCH=arm \
