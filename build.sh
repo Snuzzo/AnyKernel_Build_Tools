@@ -17,6 +17,7 @@ MAKE=$TOOLS_DIR/make.sh
 
 ZIP=$TARGET_DIR/update-$VERSION.zip
 SHA1=$TOOLS_DIR/sha1.sh
+FTP=$TOOLS_DIR/ftp.sh
 UPDATE_ROOT=$LOCAL_BUILD_DIR/update
 KEYS=$LOCAL_BUILD_DIR/keys
 CERT=$KEYS/certificate.pem
@@ -99,5 +100,5 @@ cp $ANYKERNEL/* $LOCAL_BUILD_DIR/update/kernel
     zip -r ../update.zip .
 )
 java -jar $TOOLS_DIR/signapk.jar $CERT $KEY $LOCAL_BUILD_DIR/update.zip $ZIP
-
+$FTP
 msg COMPLETE
