@@ -15,13 +15,16 @@ MAKE=$TOOLS_DIR/make.sh
 
 # -----------------------
 
-ZIP=$TARGET_DIR/update-$VERSION.zip
+ZIP=$TARGET_DIR/$VERSION.zip
 SHA1=$TOOLS_DIR/sha1.sh
 UPDATE_ROOT=$LOCAL_BUILD_DIR/update
 KEYS=$LOCAL_BUILD_DIR/keys
 CERT=$KEYS/certificate.pem
 KEY=$KEYS/key.pk8
 ANYKERNEL=$LOCAL_BUILD_DIR/kernel
+GLOBAL=$LOCAL_BUILD_DIR/global
+POSTBOOT=$LOCAL_BUILD_DIR/postboot
+VIDEOFIX=$LOCAL_BUILD_DIR/videofix
 ZIMAGE=arch/arm/boot/zImage
 
 msg Building: $VERSION
@@ -75,8 +78,6 @@ cp $TOOLS_DIR/update-binary $UPDATE_ROOT/META-INF/com/google/android
 
 $SHA1
 
-cp sha2 $LOCAL_BUILD_DIR/sha1
-
 SUM=`sha1sum $ZIMAGE | cut --delimiter=' ' -f 1`
  
 (
@@ -91,9 +92,10 @@ EOF
 
 
 cp $ZIMAGE $ANYKERNEL
-mkdir -p $LOCAL_BUILD_DIR/update/kernel
-cp $ANYKERNEL/* $LOCAL_BUILD_DIR/update/kernel
-
+cp $ANYKERNEL/* $UPDATE_ROOT/kernel
+cp $GLOBAL/* $UPDATE_ROOT/global
+cp $POSTBOOT/* $UPDATE_ROOT/postboot
+cp $VIDEOFIX/* $UPDATE_ROOT/videofix
 
 (
     cd $UPDATE_ROOT
